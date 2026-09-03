@@ -1,53 +1,31 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/c_vr2.JPG'
-import {FaAward} from 'react-icons/fa'
-import {FiUsers} from 'react-icons/fi'
-import {VscFolderLibrary} from 'react-icons/vsc'
 
-const About = () => {
-  return (
-    <section id='about'>
-      <h5>To Know</h5>
-      <h2>About me</h2>
+const skills = ['SQL Server', 'JavaScript', 'C', 'REST API', 'Kotlin', 'HTML/CSS', 'JSON', 'HSM']
+const career = [
+  { role: 'Practicante de Desarrollo', dates: '2021–2023' },
+  { role: 'Programador', dates: '2023–2026' },
+  { role: 'Analista Programador', dates: '2026–actualidad' }
+]
 
-      <div className="container about_container">
-        <div className="about_me">
-          <div className="about_me-image">
-            <img src={ME} alt="About image" />
-          </div>
-        </div>
-        <div className="about_content">
-          <div className="about_cards">
-            <article className='about_card'>
-              <FaAward className='about_icon'/>
-              <h5>Experience</h5>
-              <small>1+ Years Working</small>
-            </article>
-
-            <article className='about_card'>
-              <FiUsers className='about_icon'/>
-              <h5>Clients</h5>
-              <small>100+ Perú</small>
-            </article>
-
-            <article className='about_card'>
-              <VscFolderLibrary className='about_icon'/>
-              <h5>Projects</h5>
-              <small>10+ Completed</small>
-            </article>
-          </div>
-          <p>
-            Parrafo de prueba Parrafo de prueba Parrafo de prueba Parrafo de prueba Parrafo de prueba Parrafo de prueba
-            Parrafo de prueba Parrafo de pruebaParrafo de pruebaParrafo de prueba Parrafo de prueba Parrafo de prueba 
-            Parrafo de prueba Parrafo de prueba Parrafo de prueba Parrafo de prueba
-          </p>
-          <a href="#contact" className='btn btn-primary'>Let's Talk</a>
-        </div>
+const About = () => (
+  <section id="about" className="container about-section">
+    <div className="about-panel glass">
+      <div className="profile-copy">
+        <h2>Perfil y trayectoria</h2>
+        <p>Bachiller en Ingeniería de Sistemas con experiencia progresiva en análisis, diseño, desarrollo, pruebas y despliegue de soluciones de software para banca, seguridad de la información, criptografía y comercio electrónico.</p>
+        <ol className="career" aria-label="Trayectoria profesional">
+          {career.map(({ role, dates }) => (
+            <li key={role}><span className="career-dot" aria-hidden="true" /><strong>{role}</strong><time>{dates}</time></li>
+          ))}
+        </ol>
       </div>
-    </section>
-    
-  )
-}
+      <div className="skills-block">
+        <h2>Habilidades clave</h2>
+        <div className="skills-grid">{skills.map(skill => <span className="skill-chip" key={skill}>{skill}</span>)}</div>
+      </div>
+    </div>
+  </section>
+)
 
 export default About

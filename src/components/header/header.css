@@ -1,70 +1,36 @@
-header{
-    height: 100vh;
-    padding-top: 7rem;
-    overflow: hidden;
+.hero { min-height: 100vh; display: grid; align-items: center; padding: 8.5rem 0 4rem; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(320px, 5fr); align-items: center; gap: clamp(3rem, 7vw, 7rem); }
+.eyebrow { margin-bottom: 1rem; color: var(--accent-strong); font-family: 'Manrope', sans-serif; font-size: .875rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
+.hero h1 { color: var(--ink); font-size: clamp(3rem, 6vw, 4.5rem); letter-spacing: -.045em; }
+.hero-name { transition: opacity 180ms ease; }
+.hero-name.is-morphing, .hero-name.is-collapsed { opacity: 0; }
+.hero-lead { max-width: 650px; margin-top: 1.25rem; font-size: clamp(1rem, 1.7vw, 1.125rem); line-height: 1.7; }
+.cta { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.8rem; }
+.hero-facts { max-width: 720px; display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 2rem; padding: 1rem 1.3rem; border-radius: var(--radius-md); }
+.hero-facts > div { display: grid; gap: .1rem; padding: 0 1.2rem; }
+.hero-facts > div + div { border-left: 1px solid rgba(82,103,123,.22); }
+.hero-facts strong { color: var(--accent-strong); font-family: 'Manrope', sans-serif; font-size: 1.2rem; }
+.hero-facts span { color: var(--ink-soft); font-size: .875rem; }
+.portrait { width: min(100%, 430px); aspect-ratio: 1 / 1.08; justify-self: end; display: grid; place-items: center; padding: 1.8rem; overflow: hidden; border-radius: var(--radius-lg); background: rgba(242,249,250,.16); backdrop-filter: blur(18px) saturate(132%); }
+:root[data-theme='dark'] .portrait { backdrop-filter: none; -webkit-backdrop-filter: none; }
+.portrait::after { content: ''; position: absolute; width: 78%; aspect-ratio: 1; border-radius: 50%; background: rgba(211,230,234,.66); filter: blur(2px); }
+.portrait-inner { position: relative; z-index: 1; width: 88%; aspect-ratio: 1; border-radius: 50%; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(255,255,255,.75); }
+.portrait-inner img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 900px) {
+  .hero { min-height: auto; padding-top: 8rem; }
+  .hero-grid { grid-template-columns: minmax(0, 1.2fr) minmax(230px, .8fr); gap: 2rem; }
+  .hero-facts { grid-column: 1 / -1; }
 }
-.header_container{
-    text-align: center;
-    height: 100%;
-    position: relative;
+@media (max-width: 700px) {
+  .hero { padding: 7.5rem 0 2rem; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .portrait { grid-row: 1; width: min(72vw, 320px); justify-self: center; }
+  .hero-copy { text-align: left; }
+  .hero-facts { padding-inline: .65rem; }
+  .hero-facts > div { padding-inline: .65rem; }
 }
-/*=============CTA===========*/
-.cta{
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 1.2rem;
-    justify-content: center;
-}
-/*===============Header socials=====================*/
-.header_socials{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    position: absolute;
-    left: 0;
-    bottom: 3rem;
-}
-.header_socials::after{
-    content: '';
-    width: 1px;
-    height: 2rem;
-    background-color: var(--color-primary);
-}
-/*============Me===============*/
-.me{
-    background: linear-gradient(var(--color-primary), transparent);
-    width: 22rem;
-    height: 30rem;
-    position: absolute;
-    left: calc(50% - 11rem);
-    margin-top: 4rem;
-    border-radius: 12rem 12rem 0 0;
-    overflow: hidden;
-    padding: 5rem 1.5rem 1.5rem 1.5rem;
-}
-/*========Scroll_down=========*/
-.scroll_down{
-    position: absolute;
-    right: -2.3rem;
-    bottom: 5rem;
-    transform: rotate(90deg);
-    font-weight: 300;
-    font-size: 0.9rem;
-}
-/*=================RESPONSIVE MEDIUM================*/
-@media screen and (max-width: 1024px) {
-    header{
-        height: 68vh;
-    }
-}
-/*=================RESPONSIVE SMALL================*/
-@media screen and (max-width: 600px) {
-    header{
-        height: 100vh;
-    }
-    .header_socials,
-    .scroll_down{
-        display: none;
-    }
+@media (max-width: 480px) {
+  .hero-facts strong { font-size: 1rem; }
+  .hero-facts span { font-size: .75rem; }
+  .cta .btn { flex: 1; padding-inline: .8rem; }
 }

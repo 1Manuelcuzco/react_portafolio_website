@@ -1,13 +1,11 @@
 import React from 'react'
-import CV from '../../assets/tr.pdf'
+import { FiArrowRight, FiMail } from 'react-icons/fi'
 
-const CTA = () => {
-  return (
-    <div className='cta'>
-        <a href={CV} download className='btn'>Download CV</a>
-        <a href="#contact" className='btn btn-primary'>Let's Talk</a>
-    </div>
-  )
-}
+const CTA = () => (
+  <div className="cta">
+    <a href="#portafolio" className="btn btn-primary">Ver proyectos <FiArrowRight aria-hidden="true" /></a>
+    <a href="#contact" className="btn">Contactar <FiMail aria-hidden="true" /></a>
+  </div>
+)
 
 export default CTA

@@ -1,50 +1,63 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import './contact.css'
-import {MdOutlineEmail} from 'react-icons/md'
-import {RiMessengerLine} from 'react-icons/ri'
-import {BsWhatsapp} from 'react-icons/bs'
-import { useRef } from 'react';
-import emailjs from 'emailjs-com'
+import { FiMail } from 'react-icons/fi'
+import { BsLinkedin, BsWhatsapp } from 'react-icons/bs'
+
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/manuel812e@gmail.com'
 
 const Contact = () => {
-  const form=useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const form = useRef()
+  const [status, setStatus] = useState('')
+  const [isSending, setIsSending] = useState(false)
 
-    emailjs.sendForm('service_ixrf1kf', 'template_irbebco', form.current, 'VPly3T-oTvLBCvxJa');
-    e.target.reset();
-  };
+  const sendEmail = async (event) => {
+    event.preventDefault()
+    if (isSending) return
+    setIsSending(true)
+    setStatus('Enviando…')
+    try {
+      const formData = new FormData(form.current)
+      formData.append('_subject', 'Nuevo mensaje desde el portafolio')
+      formData.append('_template', 'table')
+      formData.append('_replyto', formData.get('email'))
+
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: formData
+      })
+      if (!response.ok) throw new Error('No se pudo procesar el formulario')
+
+      form.current.reset()
+      setStatus('Mensaje enviado correctamente.')
+    } catch {
+      setStatus('No se pudo enviar. Escríbeme directamente por correo.')
+    } finally {
+      setIsSending(false)
+    }
+  }
+
   return (
-    <section id='contact'>
-      <h5>Get In Touch</h5>
-      <h2>Contact Me</h2>
-      <div className="container contact_container">
-        <div className="contact_options">
-          <article className="contact_option">
-            <MdOutlineEmail className='contact_option-icon'/>
-            <h4>Email</h4>
-            <h5>mcuzcor15_2@unc.edu.pe</h5>
-            <a href="mailto:mcuzcor15_2@unc.edu.pe" target="_blank">Send a message</a>
-          </article>
-          <article className="contact_option">
-            <RiMessengerLine className='contact_option-icon'/>
-            <h4>Messenger</h4>
-            <h5>Cuzco Ramos</h5>
-            <a href="https://m.me/cuzco.ramos" target="_blank">Send a message</a>
-          </article>
-          <article className="contact_option">
-            <BsWhatsapp className='contact_option-icon'/>
-            <h4>Whatsapp</h4>
-            <h5>+51 940371162</h5>
-            <a href="https://api.whatsapp.com/send?phone=51940371162" target="_blank">Send a message</a>
-          </article>
+    <section id="contact" className="container contact-section">
+      <div className="contact-panel glass">
+        <div className="contact-copy">
+          <h2>Hablemos de tu próximo proyecto</h2>
+          <p>¿Tienes un reto en mente? Estoy disponible para conversar sobre soluciones robustas, seguras y mantenibles.</p>
+          <div className="contact-actions">
+            <a className="btn" href="mailto:manuel812e@gmail.com"><FiMail aria-hidden="true" /> Enviar correo</a>
+            <a className="btn" href="https://linkedin.com/in/manuel-edilberto-cuzco-ramos-805518169" target="_blank" rel="noreferrer"><BsLinkedin aria-hidden="true" /> LinkedIn</a>
+            <a className="btn" href="https://api.whatsapp.com/send?phone=51940371162" target="_blank" rel="noreferrer"><BsWhatsapp aria-hidden="true" /> WhatsApp</a>
+          </div>
         </div>
-        {/*END OF COONTACT OPTIONS*/}
-        <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name='name' placeholder='Your Full Name' required/>
-          <input type="email" name='email' placeholder='Your Email' required />
-          <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
-          <button type='submit' className='btn btn-primary'>Send Message</button>
+        <form ref={form} onSubmit={sendEmail} className="contact-form">
+          <label className="form-honeypot" aria-hidden="true">No completar<input type="text" name="_honey" tabIndex="-1" autoComplete="off" /></label>
+          <div className="form-row">
+            <label>Nombre<input type="text" name="name" autoComplete="name" required placeholder="Tu nombre" /></label>
+            <label>Correo<input type="email" name="email" autoComplete="email" required placeholder="tu@correo.com" /></label>
+          </div>
+          <label>Mensaje<textarea name="message" rows="5" required placeholder="Cuéntame sobre tu proyecto…" /></label>
+          <button type="submit" className="btn btn-primary" disabled={isSending}>{isSending ? 'Enviando…' : 'Enviar mensaje'}</button>
+          <p className="form-status" aria-live="polite">{status}</p>
         </form>
       </div>
     </section>
