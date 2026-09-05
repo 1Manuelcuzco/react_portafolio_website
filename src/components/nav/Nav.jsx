@@ -177,6 +177,7 @@ const Nav = () => {
       </button>
       <div id="nav-links" className={`nav-links ${open ? 'open' : ''}`}>
         {links.map(([label, href]) => <a key={label} href={href} onClick={() => setOpen(false)}>{label}</a>)}
+        <a className="nav-cv-mobile" href={CV} download onClick={() => setOpen(false)}>Descargar CV <FiDownload aria-hidden="true" /></a>
       </div>
       <a className="nav-cv btn" href={CV} download>Descargar CV <FiDownload aria-hidden="true" /></a>
       <button className="nav-theme btn" type="button" onClick={() => setTheme(current => current === 'dark' ? 'light' : 'dark')} aria-label={theme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro'} title={theme === 'dark' ? 'Modo claro' : 'Modo oscuro'}>
