@@ -39,7 +39,7 @@
 @media (max-width: 900px) {
   .site-nav.glass { width: calc(100% - 32px); min-height: 64px; grid-template-columns: auto minmax(0, 1fr) 44px 44px; gap: .45rem; padding: .45rem .55rem .45rem 1rem; }
   .nav-brand { grid-column: 1; }
-  .nav-cv { display: none; }
+  .site-nav.glass > .nav-cv { display: none; }
   .nav-theme { grid-column: 3; }
   .nav-toggle { width: 44px; height: 44px; display: grid; place-items: center; border: 0; background: transparent; color: var(--ink); font-size: 1.5rem; cursor: pointer; order: 4; }
   .nav-toggle { grid-column: 4; }
