@@ -1,7 +1,7 @@
 import React from 'react'
 import './about.css'
 
-const skills = ['SQL Server', 'JavaScript', 'C', 'REST API', 'Kotlin', 'HTML/CSS', 'JSON', 'HSM']
+const skills = ['SQL Server', 'JavaScript', 'C', 'REST API', 'Kotlin', 'HTML/CSS', 'JSON']
 const career = [
   { role: 'Practicante de Desarrollo', dates: '2021–2023' },
   { role: 'Programador', dates: '2023–2026' },

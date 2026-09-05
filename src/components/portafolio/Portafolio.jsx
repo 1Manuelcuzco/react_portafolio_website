@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './portafolio.css'
 import { FiArrowLeft, FiArrowRight, FiArrowUpRight, FiLock } from 'react-icons/fi'
+import FISIOAPP from '../../assets/p_app_fisioapp.png'
 import ACCESS from '../../assets/p_app_accessControl.JPG'
 import FLY from '../../assets/p_app_fly.JPG'
 import SIARP from '../../assets/p_web_siarp.JPG'
@@ -9,6 +10,7 @@ import LIB from '../../assets/p_lib_db.JPG'
 import VR from '../../assets/c_vr1.JPG'
 
 const projects = [
+  { title: 'Sistema de gestión de citas de fisioterapia', description: 'Aplicación privada y hecha a medida para gestionar pacientes, citas, tratamientos e instrumentos de fisioterapia.', details: 'Incluye notificaciones por SMS al paciente y un apartado de reportes para facilitar el seguimiento y la gestión del consultorio.', image: FISIOAPP, tags: ['Gestión de citas', 'Notificaciones SMS', 'Reportes'], private: true },
   { title: 'Control de accesos', description: 'Plataforma interna para gestionar empresas, usuarios, aplicaciones y permisos con roles.', details: 'Participé en el diseño y desarrollo de módulos para administrar empresas, usuarios, aplicaciones y permisos, con especial atención al control de acceso y la seguridad.', image: ACCESS, tags: ['JavaScript', 'PostgreSQL', 'Seguridad'], private: true },
   { title: 'Simulador de vuelo RC', description: 'Dashboard SCADA para telemetría de vuelo y control remoto de aeronaves RC.', details: 'Interfaz especializada que integra telemetría, instrumentos de vuelo, geolocalización, estado de señal y controles para aeronaves RC.', image: FLY, tags: ['JavaScript', 'SCADA', 'Telemetría'], private: true },
   { title: 'Sitio web SIARP', description: 'Sitio institucional responsive con secciones dinámicas e interacción 3D.', details: 'Sitio público responsive desarrollado con tecnologías web e interacción 3D para presentar las líneas de trabajo y servicios de la empresa.', image: SIARP, tags: ['JavaScript', 'Three.js', 'WebGL'], href: 'https://www.siarperu.com/web/' },
