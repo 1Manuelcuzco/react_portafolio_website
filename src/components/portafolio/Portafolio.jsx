@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './portafolio.css'
 import { FiArrowLeft, FiArrowRight, FiArrowUpRight, FiLock } from 'react-icons/fi'
-import FISIOAPP from '../../assets/p_app_fisioapp.png'
+import FISIOAPP from '../../assets/p_app_fisioapp.jpg'
 import ACCESS from '../../assets/p_app_accessControl.JPG'
 import FLY from '../../assets/p_app_fly.JPG'
 import SIARP from '../../assets/p_web_siarp.JPG'
