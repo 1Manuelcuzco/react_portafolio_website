@@ -2,9 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import './portafolio.css'
 import { FiArrowLeft, FiArrowRight, FiArrowUpRight, FiLock } from 'react-icons/fi'
 import FISIOAPP from '../../assets/p_app_fisioapp.jpg'
-import ACCESS from '../../assets/p_app_accessControl.JPG'
+import ACCESS from '../../assets/p_app_access_control_v2.png'
 import FLY from '../../assets/p_app_fly.JPG'
 import SIARP from '../../assets/p_web_siarp.JPG'
+import SIARP_MINIMAL from '../../assets/p_web_siarp_minimal.png'
 import API from '../../assets/p_app_REST-API.JPG'
 import LIB from '../../assets/p_lib_db.JPG'
 import VR from '../../assets/c_vr1.JPG'
@@ -13,7 +14,8 @@ const projects = [
   { title: 'Sistema de gestión de citas de fisioterapia', description: 'Aplicación privada y hecha a medida para gestionar pacientes, citas, tratamientos e instrumentos de fisioterapia.', details: 'Incluye notificaciones por SMS al paciente y un apartado de reportes para facilitar el seguimiento y la gestión del consultorio.', image: FISIOAPP, tags: ['Gestión de citas', 'Notificaciones SMS', 'Reportes'], private: true },
   { title: 'Control de accesos', description: 'Plataforma interna para gestionar empresas, usuarios, aplicaciones y permisos con roles.', details: 'Participé en el diseño y desarrollo de módulos para administrar empresas, usuarios, aplicaciones y permisos, con especial atención al control de acceso y la seguridad.', image: ACCESS, tags: ['JavaScript', 'PostgreSQL', 'Seguridad'], private: true },
   { title: 'Simulador de vuelo RC', description: 'Dashboard SCADA para telemetría de vuelo y control remoto de aeronaves RC.', details: 'Interfaz especializada que integra telemetría, instrumentos de vuelo, geolocalización, estado de señal y controles para aeronaves RC.', image: FLY, tags: ['JavaScript', 'SCADA', 'Telemetría'], private: true },
-  { title: 'Sitio web SIARP', description: 'Sitio institucional responsive con secciones dinámicas e interacción 3D.', details: 'Sitio público responsive desarrollado con tecnologías web e interacción 3D para presentar las líneas de trabajo y servicios de la empresa.', image: SIARP, tags: ['JavaScript', 'Three.js', 'WebGL'], href: 'https://www.siarperu.com/web/' },
+  { title: 'Sitio web SIARP — versión 1', description: 'Sitio institucional responsive con secciones dinámicas e interacción 3D.', details: 'Sitio público responsive desarrollado con tecnologías web e interacción 3D para presentar las líneas de trabajo y servicios de la empresa.', image: SIARP, tags: ['JavaScript', 'Three.js', 'WebGL'], href: 'https://www.siarperu.com/web/' },
+  { title: 'Sitio web minimalista responsivo', description: 'Sitio corporativo tipo SPA para presentar de manera clara toda la información de la empresa.', details: 'Sitio público responsivo desarrollado con framework propietario. Se construyó como SPA y muestra toda la información de la empresa.', image: SIARP_MINIMAL, tags: ['SPA', 'Responsive', 'Framework propietario'], href: 'https://www.siarperu.com/web/' },
   { title: 'API REST para modelos 3D', description: 'Servicios REST con Node.js y SQL Server para una aplicación web con modelos VRM.', details: 'Servicios REST con Node.js y procedimientos almacenados en SQL Server para conectar una experiencia web con modelos 3D.', image: API, tags: ['Node.js', 'SQL Server', 'REST'], private: true },
   { title: 'Librería multibase de datos en C', description: 'Librería para administrar conexiones con distintos motores de bases de datos.', details: 'Componente en C destinado a abstraer conexiones y operaciones con distintos motores de bases de datos dentro de un entorno propietario.', image: LIB, tags: ['C', 'PostgreSQL', 'SQL Server'], private: true },
   { title: 'Interfaz web con avatar 3D', description: 'Experiencia interactiva en navegador para visualizar y presentar un personaje tridimensional.', details: 'Prototipo de interfaz web orientado a la visualización de un avatar 3D dentro de un escenario interactivo.', image: VR, tags: ['JavaScript', 'Three.js', 'VRM'], private: true }
