@@ -3,7 +3,7 @@ import './nav.css'
 import { FiDownload, FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi'
 import CV from '../../assets/manuel-cuzco-cv.docx'
 
-const links = [['Inicio', '#home'], ['Perfil', '#about'], ['Experiencia', '#about'], ['Proyectos', '#portafolio'], ['Contacto', '#contact']]
+const links = [['Inicio', '#home'], ['Perfil', '#about'], ['Proyectos', '#portafolio'], ['Contacto', '#contact']]
 
 const getInitialTheme = () => {
   try {

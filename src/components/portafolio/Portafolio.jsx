@@ -109,7 +109,6 @@ const Portafolio = () => {
           )}
         </div>
       </div>
-      <p className="privacy-note glass">Algunos proyectos son confidenciales y se presentan mediante resúmenes sin código ni datos sensibles.</p>
     </section>
   )
 }
