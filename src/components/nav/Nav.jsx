@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './nav.css'
 import { FiDownload, FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi'
-import CV from '../../assets/manuel-cuzco-cv.docx'
+import CV from '../../assets/manuel-cuzco-cv.pdf'
 
 const links = [['Inicio', '#home'], ['Perfil', '#about'], ['Proyectos', '#portafolio'], ['Contacto', '#contact']]
 
