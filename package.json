@@ -1,7 +1,7 @@
 {
-  "name": "react-portafolio-website-1",
+  "name": "portafolio",
   "version": "1.0.0",
-  "homepage": "https://1manuelcuzco.github.io/react_portafolio_website",
+  "homepage": "https://1manuelcuzco.github.io/portafolio",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
