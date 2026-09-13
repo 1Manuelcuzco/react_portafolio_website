@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react_portafolio_website/static/css/main.3ee67db0.css",
-    "main.js": "/react_portafolio_website/static/js/main.f0853e51.js",
+    "main.js": "/react_portafolio_website/static/js/main.ee3f0cce.js",
     "static/media/p_web_siarp_minimal.png": "/react_portafolio_website/static/media/p_web_siarp_minimal.91b69ec935a9e4c9b597.png",
     "static/media/p_app_REST-API.JPG": "/react_portafolio_website/static/media/p_app_REST-API.8ca76088f23b773ec712.JPG",
     "static/media/c_vr1.JPG": "/react_portafolio_website/static/media/c_vr1.567148d824b67536ae95.JPG",
@@ -14,10 +14,10 @@
     "static/media/manuel-cuzco-cv.docx": "/react_portafolio_website/static/media/manuel-cuzco-cv.460caba002c0b0388ced.docx",
     "index.html": "/react_portafolio_website/index.html",
     "main.3ee67db0.css.map": "/react_portafolio_website/static/css/main.3ee67db0.css.map",
-    "main.f0853e51.js.map": "/react_portafolio_website/static/js/main.f0853e51.js.map"
+    "main.ee3f0cce.js.map": "/react_portafolio_website/static/js/main.ee3f0cce.js.map"
   },
   "entrypoints": [
     "static/css/main.3ee67db0.css",
-    "static/js/main.f0853e51.js"
+    "static/js/main.ee3f0cce.js"
   ]
 }
