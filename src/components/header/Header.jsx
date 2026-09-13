@@ -1,7 +1,7 @@
 import React from 'react'
 import './header.css'
 import CTA from './CTA'
-import ME from '../../assets/img_profil.png'
+import ME from '../../assets/profile_portrait_professional.png'
 
 const Header = () => (
   <header className="hero" id="home">
@@ -18,7 +18,7 @@ const Header = () => (
         </div>
       </div>
       <div className="portrait glass">
-        <div className="portrait-inner"><img src={ME} alt="Ilustración de Manuel Cuzco" /></div>
+        <div className="portrait-inner"><img src={ME} alt="Retrato profesional de Manuel Cuzco" /></div>
       </div>
     </div>
   </header>

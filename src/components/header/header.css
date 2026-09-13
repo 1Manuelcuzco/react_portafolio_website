@@ -13,9 +13,8 @@
 .hero-facts span { color: var(--ink-soft); font-size: .875rem; }
 .portrait { width: min(100%, 430px); aspect-ratio: 1 / 1.08; justify-self: end; display: grid; place-items: center; padding: 1.8rem; overflow: hidden; border-radius: var(--radius-lg); background: rgba(242,249,250,.16); backdrop-filter: blur(18px) saturate(132%); }
 :root[data-theme='dark'] .portrait { backdrop-filter: none; -webkit-backdrop-filter: none; }
-.portrait::after { content: ''; position: absolute; width: 78%; aspect-ratio: 1; border-radius: 50%; background: rgba(211,230,234,.66); filter: blur(2px); }
-.portrait-inner { position: relative; z-index: 1; width: 88%; aspect-ratio: 1; border-radius: 50%; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(255,255,255,.75); }
-.portrait-inner img { width: 100%; height: 100%; object-fit: cover; }
+.portrait-inner { position: relative; z-index: 1; width: 100%; height: 100%; border-radius: var(--radius-md); overflow: hidden; box-shadow: inset 0 0 0 1px rgba(255,255,255,.75); }
+.portrait-inner img { width: 100%; height: 100%; object-fit: cover; object-position: center 32%; }
 @media (max-width: 900px) {
   .hero { min-height: auto; padding-top: 8rem; }
   .hero-grid { grid-template-columns: minmax(0, 1.2fr) minmax(230px, .8fr); gap: 2rem; }
