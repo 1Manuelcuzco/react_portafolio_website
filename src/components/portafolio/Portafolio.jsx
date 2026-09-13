@@ -57,7 +57,7 @@ const Portafolio = () => {
     <section id="portafolio" className="container projects-section">
       <div className="section-heading"><h2>Proyectos seleccionados</h2><p>Trabajo aplicado en seguridad, datos e interfaces especializadas.</p></div>
       <div className="project-showcase">
-        <article className="featured-project glass" tabIndex="-1">
+        <article className={`featured-project glass${detailsOpen ? ' details-open' : ''}`} tabIndex="-1">
           <div className="featured-project-image">
             <img className="project-image-blur" src={selected.image} alt="" aria-hidden="true" />
             <img className="project-image-main" src={selected.image} alt={`Vista del proyecto ${selected.title}`} />
