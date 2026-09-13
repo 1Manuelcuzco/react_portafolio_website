@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/portafolio/static/css/main.4429f9f6.css",
-    "main.js": "/portafolio/static/js/main.5ccf9978.js",
+    "main.js": "/portafolio/static/js/main.bafb5e15.js",
     "static/media/p_web_siarp_minimal.png": "/portafolio/static/media/p_web_siarp_minimal.91b69ec935a9e4c9b597.png",
     "static/media/profile_portrait_professional.png": "/portafolio/static/media/profile_portrait_professional.e4feb58f4004499fb451.png",
     "static/media/p_app_REST-API.JPG": "/portafolio/static/media/p_app_REST-API.8ca76088f23b773ec712.JPG",
     "static/media/p_app_fly.JPG": "/portafolio/static/media/p_app_fly.fad022bc986c1d4dbfb4.JPG",
     "static/media/p_lib_db.JPG": "/portafolio/static/media/p_lib_db.5b3573b37b019624de73.JPG",
     "static/media/p_web_siarp.JPG": "/portafolio/static/media/p_web_siarp.0f2f41bf61d24ef2ce2c.JPG",
+    "static/media/manuel-cuzco-cv.pdf": "/portafolio/static/media/manuel-cuzco-cv.b244302d3ab245407b8c.pdf",
     "static/media/p_app_access_control_v2.png": "/portafolio/static/media/p_app_access_control_v2.a962482fa42df0842451.png",
     "static/media/p_app_fisioapp.jpg": "/portafolio/static/media/p_app_fisioapp.bfbb770b32c26e965952.jpg",
-    "static/media/manuel-cuzco-cv.docx": "/portafolio/static/media/manuel-cuzco-cv.460caba002c0b0388ced.docx",
     "index.html": "/portafolio/index.html",
     "main.4429f9f6.css.map": "/portafolio/static/css/main.4429f9f6.css.map",
-    "main.5ccf9978.js.map": "/portafolio/static/js/main.5ccf9978.js.map"
+    "main.bafb5e15.js.map": "/portafolio/static/js/main.bafb5e15.js.map"
   },
   "entrypoints": [
     "static/css/main.4429f9f6.css",
-    "static/js/main.5ccf9978.js"
+    "static/js/main.bafb5e15.js"
   ]
 }
