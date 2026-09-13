@@ -45,7 +45,7 @@ const Portafolio = () => {
 
   const selectProject = index => {
     setSelectedIndex(index)
-    setDetailsOpen(true)
+    setDetailsOpen(false)
     window.requestAnimationFrame(() => {
       const featuredProject = document.querySelector('.featured-project')
       featuredProject?.scrollIntoView({ behavior: 'smooth', block: 'center' })
